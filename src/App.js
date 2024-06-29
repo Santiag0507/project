@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Header from './Header';
 import Footer from './Footer';
+import carrito from './Carrito'
 import GaussianBellCurve from './GaussianBellCurve';
 
 const graphicsCards = [
@@ -195,7 +196,9 @@ const App = () => {
                     </div>
                   )}
                 </div>
-                <Button id="buy-button" onClick={handleBuyClick}><FaShoppingCart /> Comprar</Button>
+               
+                <Button id="buy-button" onClick={handleBuyClick} ><FaShoppingCart /> Comprar</Button>
+                
                 {selectedGraphicsCard && selectedProcessor && (
                   <div id="performance-chart">
                     <GaussianBellCurve mean={50} stdDev={15} totalScore={getTotalScore()} />
